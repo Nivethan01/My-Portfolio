@@ -1,0 +1,134 @@
+/* Navbar.css */
+
+/* Navbar styles */
+.navbar {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 17px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #000;
+}
+
+.logo {
+  max-width: 100px;
+  height: auto;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 60px;
+  font-size: 20px;
+}
+
+.nav-menu li {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-menu p {
+  color: #fff;
+  margin: 0;
+  position: relative;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu p:hover {
+  color: #ff05de;
+  transform: scale(1.1);
+}
+
+.nav-menu img {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%) scaleY(0);
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu li:hover img,
+.nav-menu li img {
+  transform: translateX(-50%) scaleY(1);
+}
+
+.nav-connect {
+  padding: 20px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  background: linear-gradient(267deg, orange 0.36%, rgb(255, 5, 222));
+  color: #fff;
+}
+
+.nav-connect:hover {
+  transform: scale(1.05);
+}
+
+/* Sticky navbar */
+.navbar.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+/* Sticky logo only in mode 1 */
+.navbar.sticky .logo {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Other logo styles */
+.logo {
+  max-width: 100px;
+  height: auto;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    margin: 20px 50px;
+  }
+
+  .nav-connect {
+    display: none;
+  }
+
+  .nav-mob-icon {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    z-index: 1001;
+    cursor: pointer;
+  }
+
+  .nav-menu {
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    gap: 30px;
+    background-color: #1f0016;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -100%; /* Initially hide the menu */
+  }
+
+  /* Slide in the menu when it's open */
+  .navbar.open .nav-menu {
+    right: 0;
+  }
+}

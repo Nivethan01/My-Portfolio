@@ -1,0 +1,49 @@
+ /* General reset and styling */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Container for the entire projects section */
+.projects {
+  padding: 20px;
+  background-color: #000000;
+}
+
+/* Title styling */
+.mywork-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mywork-title h1 {
+  font-size: 2.5em;
+  color: #aca9a9;
+}
+
+/* Container for project images */
+.mywork-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Spacing between project images */
+}
+
+/* Individual project images */
+.mywork-container img,
+.mywork-container a img {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  border: 2px solid #f83301;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+/* Hover effect for project images */
+.mywork-container img:hover,
+.mywork-container a img:hover {
+  transform: scale(1.05);
+  border-color: #fa04e2;
+}

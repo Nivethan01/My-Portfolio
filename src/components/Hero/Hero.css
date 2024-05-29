@@ -1,0 +1,75 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  height: 65vh; /* Set the height of the hero to fill the viewport */
+  margin-top: 20px; /* Adjust margin to move all content slightly down */
+}
+
+.hero img {
+  border-radius: 50%; /* Make the border circular */
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 4px solid; /* Set a solid border */
+  border-image: linear-gradient(
+    267deg,
+    orange 0.36%,
+    rgb(255, 5, 222)
+  ); /* Apply gradient border */
+}
+
+.hero h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  width: 50%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+.hero-action {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.hero-action > * {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.hero-connect {
+  padding: 25px 45px;
+  border-radius: 25px;
+  background: linear-gradient(267deg, orange 0.36%, rgb(255, 5, 222));
+  cursor: pointer;
+}
+.hero-connect:hover{
+    border: 2px solid white;
+}
+
+.hero-resume {
+    padding: 25px 45px;
+    border-radius: 50px;
+    border: 2px solid #FFF;
+    cursor: pointer;
+}
+.hero-resume:hover{
+    border-color: rgb(254, 6, 155);
+}
+
+.hero h1 span {
+  background: linear-gradient(267deg, orange 0.36%, rgb(255, 5, 222));
+  background-clip: text;
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  -webkit-text-fill-color: transparent; /* Hide original text color for Safari/Chrome */
+}
