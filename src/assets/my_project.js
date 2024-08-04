@@ -19,12 +19,14 @@ const myproject = [
   {
     p_no: 3,
     p_name: "Low Cost Prosthetic Hand",
-    p_img: Project03
+    p_img: Project03,
+    p_link:"https://lnkd.in/gJS8ncdh"
   },
   {
     p_no: 4,
-    p_name: "Project Review",
-    p_img: Project04
+    p_name: "Roxiler Product Manager",
+    p_img: Project04,
+    p_link:"https://roxiler-pro.vercel.app/"
   }
 ];
 

@@ -3,7 +3,7 @@ import "./Contact.css";
 import ContactIcon from "../../assets/contact.png";
 import Mail from "../../assets/email.png";
 import Location from "../../assets/location.png";
-
+import LinkedIn from "../../assets/linkedin.png";
 const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -18,9 +18,9 @@ const Contact = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      body: json
+      body: json,
     }).then((res) => res.json());
 
     if (res.success) {
@@ -37,8 +37,8 @@ const Contact = () => {
         <div className="contact-left">
           <h2>Let's Talk</h2>
           <p>
-            I'm currently open to taking on new projects, so feel free to ask and
-            contact me.
+            I'm currently open to taking on new projects, so feel free to ask
+            and contact me.
           </p>
           <div className="contact-details">
             <div className="contact-detail">
@@ -54,6 +54,16 @@ const Contact = () => {
             <div className="contact-detail">
               <img src={Location} alt="Location Icon" />
               <p>Tamil Nadu, India</p>
+            </div>
+            <div className="contact-detail">
+              <a
+                href="https://www.linkedin.com/in/nivethan-eswaran/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src={LinkedIn} alt="LinkedIn Icon" />
+              </a>
+              <p>Nivethan Eswaran</p>
             </div>
           </div>
         </div>
