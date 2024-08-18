@@ -14,7 +14,7 @@ const Hero = () => {
       <p className='para'>I am a fresher, energetic web developer</p>
       <div className='hero-action'>
         <div className='hero-connect' onClick={scrollToContact}>Connect with me</div>
-        <a href="https://docs.google.com/document/d/1D7MEO7SuECQFfCPDcNvY4GEY2e8xeHbK/edit?usp=drive_link&ouid=116243546086334950420&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className='hero-resume'>
+        <a href="https://docs.google.com/document/d/1p9QZjKK6iKk0qBiNgDQJWREHoLU64ZIz/edit?usp=sharing&ouid=116243546086334950420&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" className='hero-resume'>
           My resume
         </a>
       </div>
