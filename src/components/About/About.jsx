@@ -15,17 +15,7 @@ const About = () => {
         <div className="about-right">
           <div className="about-para">
             <p>
-              I'm currently immersed in my third year studying Electrical and
-              Electronics Engineering (EEE), all while fueling my passion for
-              both hardware and software development.
-            </p>
-            <p>
-              🛠️ Constantly honing my skills as a Full Stack web developer, with
-              a particular affinity for MERN stack projects. 🌐 Crafting
-              intuitive and efficient web solutions is my forte, whether it's
-              developing sleek user interfaces or optimizing server-side
-              functionalities.
-            </p>
+            I’m currently in my final year of studying Electrical and Electronics Engineering (EEE), while passionately exploring both hardware and software development. 🛠️ As a Full Stack web developer, I’m continuously honing my skills, with a strong focus on MERN stack projects, basic knowledge in SQL, and proficiency in problem-solving using Java, along with a solid understanding of object-oriented programming (OOP) concepts. 🌐 Whether it’s crafting sleek user interfaces or optimizing server-side functionalities, building intuitive and efficient web solutions is my forte.</p>
             <div className="about-skills">
               <div className="about-skill">
                 <p>JAVA</p>
