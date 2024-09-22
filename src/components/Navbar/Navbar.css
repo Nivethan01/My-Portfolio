@@ -16,6 +16,11 @@
 .logo {
   max-width: 100px;
   height: auto;
+
+}
+:hover.logo{
+  transform: scale(1.9);
+  cursor: pointer;
 }
 
 .nav-menu {

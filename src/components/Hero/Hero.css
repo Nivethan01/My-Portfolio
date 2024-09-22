@@ -21,6 +21,12 @@
   ); /* Apply gradient border */
 }
 
+:hover.hero{ /* Add hover effect */
+  transform: scale(1.1);
+  
+  cursor: pointer;
+}
+
 .hero h1 {
   font-size: 24px;
   margin-bottom: 10px;
