@@ -1,64 +1,76 @@
+/* Container for the contact section */
 .contact {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #000000;
+  background-color: rgba(0, 0, 0, 0.9); /* Dark background for depth */
   border-radius: 10px;
   color: #b3afaf; /* Text color for contact details */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Stronger shadow for depth */
 }
 
+/* Title styling */
 .contact-title {
   text-align: center;
   margin-bottom: 20px;
 }
 
+.contact-title h1 {
+  font-size: 2.5em;
+  color: #aca9a9;
+  text-shadow: 0 0 10px #ff05de, 0 0 20px #fa04e2; /* Enhanced glowing title effect */
+}
+
+/* Layout for contact sections */
 .contact-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
+/* Flex containers for left and right sections */
 .contact-left {
   flex-basis: calc(50% - 10px);
 }
 
 .contact-right {
-  flex-basis: calc(50% - 10px); /* Adjust flex basis to 50% */
+  flex-basis: calc(50% - 10px);
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   gap: 30px;
 }
 
+/* Label styling */
 .contact-right label {
   color: #ccc;
   font-size: 22px;
   font-weight: 500;
+  text-shadow: 0 0 5px #ff05de, 0 0 10px #fa04e2; /* Glowing effect for labels */
 }
 
-.contact-right input {
+/* Input and textarea styling */
+.contact-right input,
+.contact-right textarea {
   border: none;
-  width: 100%; /* Adjust width to fill the container */
-  height: 78px;
+  width: 100%;
   padding-left: 20px;
   border-radius: 4px;
-  background-color: #32323c;
+  background-color: #32323c; /* Dark background for inputs */
   color: #a0a0a0;
-  font-family: Outfit;
+  font-family: Outfit, sans-serif; /* Ensure a consistent font family */
   font-size: 20px;
+  transition: box-shadow 0.3s; /* Transition for glowing effect */
 }
 
-.contact-right textarea {
-  width: 100%; /* Adjust width to fill the container */
-  border: none;
-  padding: 25px;
-  border-radius: 4px;
-  background: #32323c;
-  color: #a0a0a0;
-  font-family: Outfit;
-  font-size: 20px;
+/* Glowing effect on focus */
+.contact-right input:focus,
+.contact-right textarea:focus {
+  box-shadow: 0 0 10px #fa04e2, 0 0 20px #ff05de; /* Glowing effect */
+  outline: none; /* Remove default outline */
 }
 
+/* Submit button styling */
 .contact-submit {
   border: none;
   color: white;
@@ -67,19 +79,24 @@
   padding: 20px 60px;
   margin-bottom: 50px;
   cursor: pointer;
-  transition: 0.3s;
-  background: linear-gradient(267deg, orange 0.36%, rgb(255, 5, 222));
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition for glow */
+  background: linear-gradient(267deg, orange 0.36%, rgb(255, 5, 222)); /* Gradient background */
+  box-shadow: 0 0 5px #ff05de, 0 0 15px #fa04e2; /* Initial glow effect */
 }
 
+/* Hover effect for the submit button */
 .contact-submit:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
+  transform: scale(1.05); /* Slight scale on hover */
+  box-shadow: 0 0 15px #fa04e2, 0 0 25px #ff05de; /* Stronger glow on hover */
 }
 
+/* Heading for contact left section */
 .contact-left h2 {
   font-size: 1.5em;
+  text-shadow: 0 0 8px #ff05de, 0 0 15px #fa04e2; /* Glowing effect for headings */
 }
 
+/* Details styling */
 .contact-details {
   margin-top: 20px;
 }
@@ -91,40 +108,13 @@
   margin-bottom: 10px;
 }
 
+/* Icon styling for contact details */
 .contact-detail img {
   width: 30px;
   margin-right: 10px;
 }
 
-.contact-form label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.contact-form button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  border: none;
-  border-radius: 5px;
-  color: #fff;
-  cursor: pointer;
-}
-
-.contact-form button:hover {
-  background-color: #0056b3;
-}
-
+/* Responsive layout adjustments */
 @media (max-width: 768px) {
   .contact-section {
     flex-direction: column;

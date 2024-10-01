@@ -1,146 +1,167 @@
+/* Footer container styling */
 .footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px;
-  margin: 50px 170px;
+  background-color: #111; /* Dark background to maintain a consistent theme */
+  color: #fff; /* White text for contrast */
+  padding: 40px 20px; /* More padding for a spacious feel */
+  margin: 0 auto; /* Center the footer */
   display: flex;
   flex-direction: column;
   gap: 30px;
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 }
 
+/* Top section of the footer */
 .footer-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+/* Left side of the footer top */
 .footer-top-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
+/* Logo/image in footer */
 .footer-top-left img {
-  max-width: 100px;
+  max-width: 100px; /* Consistent logo size */
   height: auto;
   margin-bottom: 10px;
 }
 
+/* Description text styling */
 .footer-top-left p {
-  font-size: 20px;
+  font-size: 18px; /* Slightly smaller for a cleaner look */
   max-width: 400px;
+  color: #b3afaf; /* Soft gray for better readability */
 }
 
+/* Right side of the footer top */
 .footer-top-right {
   display: flex;
   align-items: center;
-  gap: 35px;
+  gap: 35px; /* Spacing between elements */
 }
 
+/* Email input container styling */
 .footer-email-input {
   display: flex;
-  gap: 30px;
-  padding: 20px 30px;
+  gap: 15px; /* Less gap for a tighter look */
+  padding: 15px;
   border-radius: 50px;
-  background: #323232;
-  padding-right: 80px;
-  align-items: center;
+  background: #323232; /* Dark background for input area */
+  transition: box-shadow 0.3s, border 0.3s; /* Smooth transitions */
 }
 
+/* Email input styling */
 .footer-email-input input {
   outline: none;
   border: none;
-  background: transparent;
-  color: #a0a0a0;
-  font-family: Outfit;
-  font-size: 18px;
+  background: transparent; /* No background to blend */
+  color: #a0a0a0; /* Soft gray text */
+  font-family: Outfit, sans-serif;
+  font-size: 16px; /* Smaller text for better fit */
+  flex-grow: 1; /* Makes input take available space */
 }
 
+/* Email icon styling */
 .footer-email-input img {
-  width: 30px;
-  height: 30px;
+  width: 30px; /* Icon size */
+  height: 30px; /* Icon size */
 }
 
+/* Subscribe button styling */
 .footer-subscribe {
-  font-size: 20px;
-  padding: 22px 50px;
-  border-radius: 50px;
-  transition: 0.3s;
+  font-size: 20px; /* Slightly larger for emphasis */
+  padding: 15px 30px; /* Adjusted padding */
+  border-radius: 50px; /* Rounded corners */
+  transition: 0.3s, box-shadow 0.3s; /* Smooth transitions */
   cursor: pointer;
-  background: linear-gradient(267deg, orange 0.36%, rgb(255, 5, 222));
+  background: linear-gradient(267deg, #ff7e05 0%, #ff05de 100%); /* Gradient for attraction */
+  box-shadow: 0 0 5px rgba(255, 5, 222, 0.5); /* Subtle glow */
 }
 
+/* Hover effect for subscribe button */
 .footer-subscribe:hover {
-  transform: scale(1.1);
-  transition: 0.3s;
+  transform: scale(1.05); /* Slight scale up on hover */
+  box-shadow: 0 0 15px rgba(255, 5, 222, 0.8); /* Enhanced glow on hover */
 }
 
+/* Hover effect for email input */
 .footer-email-input:hover {
-  border: 2px solid white;
+  border: 2px solid #fff; /* Light border on hover */
 }
 
+/* Horizontal rule styling */
 hr {
   border: 0;
   height: 1px;
-  background-color: #fff;
+  background-color: #fff; /* Light line for separation */
   margin: 20px 0;
 }
 
+/* Bottom section of the footer */
 .footer-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* Allows wrapping */
 }
 
+/* Left side of the footer bottom */
 .footer-bottom-left {
-  font-size: 14px;
+  font-size: 14px; /* Small text for copyright or notes */
 }
 
+/* Right side of the footer bottom */
 .footer-bottom-right {
   display: flex;
-  gap: 20px;
+  gap: 20px; /* Spacing between links */
   font-size: 14px;
 }
 
+/* Hover effect for links */
 .footer-bottom-right p {
   cursor: pointer;
   transition: color 0.3s ease;
 }
 
 .footer-bottom-right p:hover {
-  color: #ff05de;
+  color: #ff05de; /* Color change for links on hover */
 }
 
+/* Responsive styles */
 @media (max-width: 768px) {
   .footer {
-    margin: 20px;
-    padding: 20px;
+    margin: 0 20px; /* Reduced margin for smaller screens */
   }
 
   .footer-top {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-direction: column; /* Stack elements on smaller screens */
+    align-items: center; /* Center align */
+    gap: 20px; /* Adjust spacing */
   }
 
   .footer-email-input {
-    width: 100%;
-    padding: 10px;
+    width: 100%; /* Full width for mobile */
+    padding: 10px; /* Less padding for mobile */
   }
 
   .footer-subscribe {
-    padding: 10px 20px;
+    padding: 10px 20px; /* Less padding for mobile */
   }
 
   .footer-bottom {
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
+    flex-direction: column; /* Stack elements on smaller screens */
+    gap: 20px; /* Adjust spacing */
+    align-items: center; /* Center align */
   }
 
   .footer-bottom-right {
-    flex-direction: column;
-    gap: 10px;
+    flex-direction: column; /* Stack links on mobile */
+    gap: 10px; /* Adjust spacing */
   }
 }

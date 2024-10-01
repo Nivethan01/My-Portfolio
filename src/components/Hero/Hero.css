@@ -1,44 +1,111 @@
+/* Keyframe for the sword-shining effect */
+@keyframes swordShine {
+  0% {
+    background-position: -200%;
+  }
+  50% {
+    background-position: 50%;
+  }
+  100% {
+    background-position: 200%;
+  }
+}
+
+/* Keyframe for glowing text */
+@keyframes glowingText {
+  0%, 100% {
+    color: #fff;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 30px #ff00ff;
+  }
+  50% {
+    color: #ff00ff;
+    text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff, 0 0 60px #ff00ff;
+  }
+}
+
+/* Main hero section */
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  height: 65vh; /* Set the height of the hero to fill the viewport */
-  margin-top: 20px; /* Adjust margin to move all content slightly down */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #000000, #333333); /* Black and grey background */
+  background-size: 400% 400%;
+  animation: backgroundShift 10s ease infinite; /* Subtle background shift */
 }
 
+/* Background animation */
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Profile image styling */
 .hero img {
-  border-radius: 50%; /* Make the border circular */
+  border-radius: 50%;
   width: 200px;
   height: 200px;
   object-fit: cover;
   margin-bottom: 20px;
-  border: 4px solid; /* Set a solid border */
-  border-image: linear-gradient(
-    267deg,
-    orange 0.36%,
-    rgb(255, 5, 222)
-  ); /* Apply gradient border */
+  border: 4px solid;
+  border-image: linear-gradient(267deg, orange 0.36%, rgb(255, 5, 222)); /* Vibrant gradient border */
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5); /* Image glow */
 }
 
-:hover.hero{ /* Add hover effect */
+/* Hover effect on profile image */
+.hero:hover img { 
   transform: scale(1.1);
-  
-  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
+/* Heading with glowing text */
 .hero h1 {
-  font-size: 24px;
+  font-size: 36px;
   margin-bottom: 10px;
+  text-align: center;
+  color: white;
+  animation: glowingText 2s ease-in-out infinite alternate; /* Glowing effect */
 }
 
+.hero h1 span {
+  background: linear-gradient(267deg, orange 0.36%, rgb(255, 5, 222));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: white;
+}
+
+/* Paragraph with smooth fade-in */
 .hero p {
   width: 50%;
   text-align: center;
-  font-size: 24px;
-  line-height: 40px;
+  font-size: 20px;
+  line-height: 32px;
+  color: white;
+  opacity: 0;
+  animation: fadeIn 2s ease-in 1s forwards; /* Fade-in effect */
 }
 
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Action buttons container */
 .hero-action {
   display: flex;
   justify-content: center;
@@ -48,34 +115,61 @@
   margin-bottom: 50px;
 }
 
-.hero-action > * {
-  margin: 0 10px;
-  cursor: pointer;
-}
-
+/* Button styles */
 .hero-connect {
-  padding: 25px 45px;
+  position: relative;
+  padding: 20px 40px;
   border-radius: 25px;
-  background: linear-gradient(267deg, orange 0.36%, rgb(255, 5, 222));
+  background: linear-gradient(267deg, #ff6f61, #ffdd57, #49beb7, #9b5de5);
+  background-size: 300%;
   cursor: pointer;
-}
-.hero-connect:hover{
-    border: 2px solid white;
+  overflow: hidden;
+  transition: background 0.3s ease;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
 }
 
+.hero-connect::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.hero-connect:hover::before {
+  opacity: 1;
+  animation: swordShine 1s linear forwards;
+}
+
+.hero-connect:hover {
+  color: #000000;
+  background-position: 200%;
+  border: 2px solid white;
+  background: linear-gradient(267deg, #9b5de5, #49beb7, #ffdd57, #ff6f61);
+  box-shadow: 0 6px 20px rgba(255, 105, 180, 0.8);
+}
+
+/* Resume button */
 .hero-resume {
-    padding: 25px 45px;
-    border-radius: 50px;
-    border: 2px solid #FFF;
-    cursor: pointer;
-}
-.hero-resume:hover{
-    border-color: rgb(254, 6, 155);
+  padding: 20px 40px;
+  border-radius: 50px;
+  border: 2px solid #FFF;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  text-transform: uppercase;
 }
 
-.hero h1 span {
-  background: linear-gradient(267deg, orange 0.36%, rgb(255, 5, 222));
-  background-clip: text;
-  -webkit-background-clip: text; /* For Safari/Chrome */
-  -webkit-text-fill-color: transparent; /* Hide original text color for Safari/Chrome */
+.hero-resume:hover {
+  border-color: rgb(254, 6, 155);
+  box-shadow: 0 4px 15px rgba(254, 6, 155, 0.6);
 }
