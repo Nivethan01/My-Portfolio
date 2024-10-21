@@ -4,6 +4,7 @@ import ContactIcon from "../../assets/contact.png";
 import Mail from "../../assets/email.png";
 import Location from "../../assets/location.png";
 import LinkedIn from "../../assets/linkedin.png";
+import GitHub from "../../assets/github.png";
 const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -64,6 +65,15 @@ const Contact = () => {
                 <img src={LinkedIn} alt="LinkedIn Icon" />
               </a>
               <p>Nivethan Eswaran</p>
+            </div>
+            <div className="contact-detail">
+              <a href="https://github.com/Nivethan01"
+              target="_blank"
+              >
+
+              <img src={GitHub} alt="GitHub Icon" />
+              </a>
+              <p>Nivethan01</p>
             </div>
           </div>
         </div>
