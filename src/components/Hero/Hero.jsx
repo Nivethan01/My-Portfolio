@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <div id='hero' className='hero'>
       <img className='hero' src={profile} alt="Profile" />
-      <h1><span>I'm Nivethan,</span> Web developer from India</h1>
+      <h1><span>I'm Nivethan,</span>Web Developer</h1>
       <p className='para'>I am a fresher, energetic web developer</p>
       <div className='hero-action'>
         <div className='hero-connect' onClick={scrollToContact}>Connect with me</div>
