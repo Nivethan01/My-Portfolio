@@ -32,7 +32,7 @@ const myproject = [
     p_no:5,
     p_name:"Chatly",
     p_img:Project05,
-    p_link:"https://github.com/Nivethan01/C-W-C.git",
+    p_link:"https://github.com/Nivethan01/C-W-C/tree/master",
     p_status:"Currently working"
   }
 ];
